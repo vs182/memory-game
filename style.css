@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url(./Diamond\ Cursor.cur), auto;
+}
+
+.container {
+    width: 1200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: linear-gradient(120deg, rgb(186, 179, 255), rgb(220, 159, 255));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score {
+    font-size: 28px;
+}
+
+.click {
+    font-size: 28px;
+}
+
+
+/* .card {
+    width: 90%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.card img {
+    margin: 20px;
+    height: 170px;
+    width: 170px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    animation: split 3s linear 1;
+}
+
+@keyframes split {
+    0% {
+        margin: 30px;
+    }
+}
+
+.card img.flip {
+    transform: rotateY(180deg);
+}
+
+.popup {
+    background: red;
+    width: 200px;
+    height: 200px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.data {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    font-size: 23px;
+}
+
+.data span {
+    color: rgb(206, 121, 11);
+    font-size: 30px;
+}
